@@ -1,0 +1,19 @@
+<div class="row article">
+	<div class="col-md-8 col-md-offset-2">
+		<form ng-submit="sendData()">
+			<div class="form-group">
+				<label for="title">Title</label>
+				<input type="text" class="form-control" id="title" required ng-model="post.title">
+			</div>
+			<div class="form-group">
+				<label for="content">Content</label>
+				<textarea class="form-control" id="content" rows="20" required ng-model="post.content"></textarea>
+			</div>
+			<div class="form-group">
+				<label for="inputFile">File input</label>
+				<input type="file" id="thumbnail" accept="image/*">
+			</div>
+			<input type="submit" id="submit" value="Apply">
+		</form>
+	</div>
+</div>

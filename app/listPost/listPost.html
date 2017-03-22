@@ -1,0 +1,22 @@
+<div class="button">
+	<div ng-if="!firebaseUser">
+		<button class="btn btn-primary btn-block btn-lg" ng-click="showLogForm()">Sign in</button>
+		<br>
+		<button class="btn btn-success btn-block btn-lg" ng-click="showRegForm()">Sign up</button>
+	</div>
+	<div ng-if="firebaseUser">
+		<button class="btn btn-warning btn-block btn-lg" ng-click="addPost()">Add post</button>
+		<br>
+		<button class="btn btn-danger btn-block btn-lg" ng-click="signOut()">Sign out</button>
+	</div>
+</div>
+<div class="row article">
+	<div class="col-md-10 col-md-offset-1" ng-repeat="item in data">
+		<div class="post_section">
+			<a ui-sref="post" ng-click="showPost(item)">
+				<h4>{{item.title}}</h4>
+				<img class="img-responsive center-block" ng-src="{{item.imgUrl}}"/>
+			</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,15 @@
+<form name="regform" class="auth">
+	<h2>registration</h2>
+	<fieldset id="inputs">
+		<input type="email" placeholder="e-mail" required ng-model="email" ng-change="message=false">   
+		<input type="password" name="password" placeholder="password" required ng-model="password" ng-change="message=false">
+		<input type="password" name="confirm" placeholder="password confirmation" required ng-model="confirm" ng-change="message=false">
+	</fieldset>
+	<div class="error">
+		<span ng-show="message">{{message}}</span>
+		<span ng-show="regform.password.$dirty && regform.confirm.$dirty && checkValid()">Passwords don't match!</span>
+	</div>
+	<fieldset id="actions">
+		<input type="submit" id="submit" value="Sign up" ng-click="signUp()">
+	</fieldset>
+</form>

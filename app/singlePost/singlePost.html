@@ -1,0 +1,11 @@
+<div class="row article">
+	<div class="col-md-10 col-md-offset-1">
+		<h4>{{item.title}}</h4>
+		<br>
+		<img class="img-responsive center-block" ng-src="{{item.imgUrl}}" />
+		<br>
+		<p>{{item.content}}</p>
+		<br>
+		<button class="btn btn-info btn-lg" ng-show="userId === item.uid" ng-click="showEditForm()">Edit</button>
+	</div>
+</div>

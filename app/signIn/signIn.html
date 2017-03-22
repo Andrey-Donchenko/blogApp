@@ -1,0 +1,14 @@
+<form name="logform" class="auth">
+	<h2>authorization</h2>
+	<fieldset id="inputs">
+		<input type="email" id="username" placeholder="e-mail" required ng-model="email" ng-change="message=false">   
+		<input type="password" id="password" placeholder="password" required ng-model="password" ng-change="message=false">
+	</fieldset>
+	<div class="error">
+		<span ng-show="message">{{message}}</span>
+	</div>
+	<fieldset id="actions">
+		<input type="submit" id="submit" value="Sign in" ng-click="signIn()">
+		<a ui-sref="signUp">Registration</a>
+	</fieldset>
+</form>

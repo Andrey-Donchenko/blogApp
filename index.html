@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>blogApp</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- build:css css/styles.css -->
+	<link rel="stylesheet" href="css/styles.css">
+	<!-- endbuild -->
+</head>
+<body>
+	<a class="home" ui-sref="home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+
+	<div class="container">
+		<ui-view></ui-view>
+	<div>
+	
+	<!-- build:js js/libs.js -->
+	<script src="libs/angular.min.js"></script>
+	<script src="libs/angular-ui-router.min.js"></script>
+	<script src="libs/firebase.js"></script>
+	<script src="libs/angularfire.min.js"></script>
+	<!-- endbuild -->
+
+	<!-- build:js js/scripts.js -->
+	<script src="app/app.module.js"></script>
+	<script src="app/config/app.routes.js"></script>
+	<script src="app/config/firebase.config.js"></script>
+	<script src="app/listPost/listPost.directive.js"></script>
+	<script src="app/singlePost/singlePost.directive.js"></script>
+	<script src="app/postEdit/postEdit.directive.js"></script>
+	<script src="app/signIn/signIn.directive.js"></script>
+	<script src="app/signUp/signUp.directive.js"></script>
+	<script src="app/services/Data.service.js"></script>
+	<script src="app/services/ChangeData.service.js"></script>
+	<script src="app/services/Auth.service.js"></script>
+	<!-- endbuild -->
+</body>
+</html>
